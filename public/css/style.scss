@@ -1,0 +1,36 @@
+*{margin:0;padding:0}
+body{
+  max-width: 1350px;
+  overflow-x: hidden;
+    box-sizing: border-box;
+}
+header{
+  width: 100%;
+  .navbar{
+     
+        h5{
+            color:#fff;
+        }
+  }
+}
+section{
+    width:100%;
+    .container-fluid{
+        .row{
+            .col-md-12{
+                .table{
+                    tr{
+                       
+                        td{
+                          
+                          border-bottom:none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#form-timkiem{
+    margin-top:2%;
+}

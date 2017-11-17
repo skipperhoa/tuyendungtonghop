@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  max-width: 1350px;
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+header {
+  width: 100%; }
+  header .navbar h5 {
+    color: #fff; }
+
+section {
+  width: 100%; }
+  section .container-fluid .row .col-md-12 .table tr td {
+    border-bottom: none; }
+
+#form-timkiem {
+  margin-top: 2%; }

@@ -1,0 +1,75 @@
+<html>
+<% include ../partials/head%>
+    <body>
+        <header>
+           <% include ../partials/header%>
+        </header>
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12" class="table-responsive">
+                        <table class="table table-hover table-bordered table-responsive" id="myTable" cellspacing="0" cellpadding="0">
+                            <thead>
+                                <tr>
+                                    <th>Công ty</th>
+                                    <th>Link</th>
+                                    <th>Thông tin</th>
+                                    <th>Ngày</th>
+                                    <th>Website</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                             <% datas.forEach(function(value){%>
+                                <%if(value.title!=""){%>
+                                <tr>
+                                    <td><h2 style="font-size: 14px;line-height:22px;"><%=value.title%></h2><strong>
+                                     
+
+                                    </td>
+                                   
+                                    <td>
+                                          <%if(value.page=='livecantho'){%>
+                                            <%var link=value.link.replace("http://livecantho.com","")%>
+                                            <%}else{%>
+                                                 <%var link=value.link%>
+                                             <%}%>
+                                        <a href='<%=value.page%>/<%=link%>' class="badge badge-warning">Chi tiết</a></td>
+
+
+                                    <td>
+                                       <span  class="badge badge-primary"><%=value.chuthich%></span>
+                                        <br/>
+                                        <p class="more_xt">
+                                            
+                                            <%=value.more_chitiet%></p>
+                                    </td>
+                                    <td>
+                                        <%if(value.date!=""){%>
+                                            <span class="badge badge-success"><%=value.date%></span>
+                                        <%}else{%>
+                                            <span class="badge badge-primary">Đang cập nhật</span>
+                                        <%}%>
+                                    </td>
+                                    <td><span class="<%=value.class%>"><%=value.page%></span></td>
+                                </tr>
+                            <%} })%>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-md-12">
+                       
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <footer>
+
+            <% include ../partials/footer%>
+        </footer>
+
+    </body>
+
+</html>
